@@ -1,0 +1,12 @@
+========================================
+Analysis Report - Heart Rate
+Generated: 2025-06-03 08:31:54
+========================================
+Device Statistics:
+  HeartRate_Monitor_B: 1210 entries
+  HeartRate_Monitor_A: 1210 entries
+
+Time Range:
+  First Entry: 2025-06-03 08:21:29
+  Last Entry: 2025-06-03 08:31:54
+

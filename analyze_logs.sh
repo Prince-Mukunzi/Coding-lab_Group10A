@@ -37,32 +37,32 @@ analyze_log() {
     echo "Analyzing $log_type log file..."
     
     # Create reports directory if it doesn't exist
-    mkdir -p reports
+    mkdir -p hospital_data/reports
     
     # Generate timestamp for report
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
     
     # Start analysis report section
-    echo "========================================" >> reports/analysis_report.txt
-    echo "Analysis Report - $log_type" >> reports/analysis_report.txt
-    echo "Generated: $timestamp" >> reports/analysis_report.txt
-    echo "========================================" >> reports/analysis_report.txt
+    echo "========================================" >> hospital_data/reports/analysis_report.txt
+    echo "Analysis Report - $log_type" >> hospital_data/reports/analysis_report.txt
+    echo "Generated: $timestamp" >> hospital_data/reports/analysis_report.txt
+    echo "========================================" >> hospital_data/reports/analysis_report.txt
     
     # Count occurrences of each device
-    echo "Device Statistics:" >> reports/analysis_report.txt
+    echo "Device Statistics:" >> hospital_data/reports/analysis_report.txt
     awk '{print $3}' "$log_file" | sort | uniq -c | sort -nr | while read count device; do
-        echo "  $device: $count entries" >> reports/analysis_report.txt
+        echo "  $device: $count entries" >> hospital_data/reports/analysis_report.txt
     done
     
     # Get first and last entry timestamps (bonus feature)
     local first_entry=$(head -n 1 "$log_file" | awk '{print $1, $2}')
     local last_entry=$(tail -n 1 "$log_file" | awk '{print $1, $2}')
     
-    echo "" >> reports/analysis_report.txt
-    echo "Time Range:" >> reports/analysis_report.txt
-    echo "  First Entry: $first_entry" >> reports/analysis_report.txt
-    echo "  Last Entry: $last_entry" >> reports/analysis_report.txt
-    echo "" >> reports/analysis_report.txt
+    echo "" >> hospital_data/reports/analysis_report.txt
+    echo "Time Range:" >> hospital_data/reports/analysis_report.txt
+    echo "  First Entry: $first_entry" >> hospital_data/reports/analysis_report.txt
+    echo "  Last Entry: $last_entry" >> hospital_data/reports/analysis_report.txt
+    echo "" >> hospital_data/reports/analysis_report.txt
     
     echo "Analysis complete! Results appended to reports/analysis_report.txt"
 }
