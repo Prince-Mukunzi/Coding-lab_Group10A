@@ -33,4 +33,4 @@ Logs are saved in the active_logs/ folder.
 - python3 temperature_recorder.py stop
 - python3 water_consumption.py stop
 
-IMPORTANT: I modified the python simulators log directory named from LOG_DIR = "active_logs"  to LOG_DIR=hospital/active_logs" this was messing up the structure of the system.
+IMPORTANT: We modified the python simulators log directory named from LOG_DIR = "active_logs"  to LOG_DIR=hospital/active_logs" this was messing up the structure of the system.
