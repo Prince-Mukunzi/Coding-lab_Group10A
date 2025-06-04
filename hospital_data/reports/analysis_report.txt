@@ -10,3 +10,15 @@ Time Range:
   First Entry: 2025-06-03 08:21:29
   Last Entry: 2025-06-03 08:31:54
 
+========================================
+Analysis Report - Temperature
+Generated: 2025-06-04 13:11:00
+========================================
+Device Statistics:
+  Temp_Recorder_B: 11 entries
+  Temp_Recorder_A: 11 entries
+
+Time Range:
+  First Entry: 2025-06-04 13:10:48
+  Last Entry: 2025-06-04 13:10:59
+
